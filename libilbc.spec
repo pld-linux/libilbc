@@ -1,10 +1,10 @@
 Summary:	iLBC Speech Coder
-#Summary(pl):	-
+Summary(pl):	Koder mowy iLBC
 Name:		libilbc
 Version:	1.0
 Release:	1
 License:	Global IP Sound v2.0 (requires registration for non-personal use)
-Group:		Applications
+Group:		Libraries
 Source0:	http://simon.morlat.free.fr/download/1.3.x/source/ilbc-rfc3951.tar.gz
 # Source0-md5:	c53bb4f1d7184789ab90d2d33571e78a
 Source1:	http://ilbcfreeware.org/documentation/gips_iLBClicense.pdf
@@ -17,13 +17,20 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 iLBC (internet Low Bitrate Codec) is a FREE speech codec suitable for
-robust voice communication over IP. The codec is designed for narrow band
-speech and results in a payload bit rate of 13.33 kbit/s with an encoding
-frame length of 30 ms and 15.20 kbps with an encoding length of 20 ms. The
-iLBC codec enables graceful speech quality degradation in the case of
-lost frames, which occurs in connection with lost or delayed IP packets.
+robust voice communication over IP. The codec is designed for narrow
+band speech and results in a payload bit rate of 13.33 kbps with an
+encoding frame length of 30 ms and 15.20 kbps with an encoding length
+of 20 ms. The iLBC codec enables graceful speech quality degradation
+in the case of lost frames, which occurs in connection with lost or
+delayed IP packets.
 
-#%description -l pl
+%description -l pl
+iLBC (internet Low Bitrate Codec) to darmowy kodek mowy nadajacy siê
+do komunikacji g³osowej po IP. Kodek jest zaprojektowany ograniczonych
+³±cz, a w efekcie wykorzystuje 13.33 kbit/s przy ramce o d³ugo¶ci 30
+ms i 15.20 kbit/s przy ramce o d³ugo¶ci 20 ms. Kodek iLBC umo¿liwia
+obni¿enie jako¶ci mowy w przypadku utraconych ramek, co zdarza siê w
+przypadku utraty po³±czenia lub opó¼nionych pakietów IP.
 
 %prep
 %setup -q -n ilbc-rfc3951
@@ -35,7 +42,6 @@ cp %{SOURCE1} .
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 
