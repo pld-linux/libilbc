@@ -10,7 +10,7 @@ Source0:	http://simon.morlat.free.fr/download/1.3.x/source/ilbc-rfc3951.tar.gz
 Source1:	http://ilbcfreeware.org/documentation/gips_iLBClicense.pdf
 # Source1-md5:	71cee7ed8e5d5440a53845e7043c4cb5
 URL:		http://ilbcfreeware.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -31,6 +31,30 @@ do komunikacji g³osowej po IP. Kodek jest zaprojektowany ograniczonych
 ms i 15.20 kbit/s przy ramce o d³ugo¶ci 20 ms. Kodek iLBC umo¿liwia
 obni¿enie jako¶ci mowy w przypadku utraconych ramek, co zdarza siê w
 przypadku utraty po³±czenia lub opó¼nionych pakietów IP.
+
+%package devel
+Summary:	Header files for iLBC library
+Summary(pl):	Pliki nag³ówkowe biblioteki iLBC
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description devel
+Header files for iLBC library.
+
+%description devel -l pl
+Pliki nag³ówkowe biblioteki iLBC.
+
+%package static
+Summary:	Static iLBC library
+Summary(pl):	Statyczna biblioteka iLBC
+Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
+
+%description static
+Static iLBC library.
+
+%description static -l pl
+Statyczna biblioteka iLBC.
 
 %prep
 %setup -q -n ilbc-rfc3951
@@ -60,5 +84,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS *.pdf
-%attr(755,root,root) %{_libdir}/*.so*
+%attr(755,root,root) %{_libdir}/libilbc.so.*.*.*
+
+%files devel
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libilbc.so
+%{_libdir}/libilbc.la
 %{_includedir}/ilbc
+
+%files static
+%defattr(644,root,root,755)
+%{_libdir}/libilbc.a
