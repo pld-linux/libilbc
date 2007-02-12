@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	iLBC Speech Coder
-Summary(pl.UTF-8):   Koder mowy iLBC
+Summary(pl.UTF-8):	Koder mowy iLBC
 Name:		libilbc
 Version:	1.0
 Release:	2
@@ -38,7 +38,7 @@ przypadku utraty połączenia lub opóźnionych pakietów IP.
 
 %package devel
 Summary:	Header files for iLBC library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki iLBC
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki iLBC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -50,7 +50,7 @@ Pliki nagłówkowe biblioteki iLBC.
 
 %package static
 Summary:	Static iLBC library
-Summary(pl.UTF-8):   Statyczna biblioteka iLBC
+Summary(pl.UTF-8):	Statyczna biblioteka iLBC
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
