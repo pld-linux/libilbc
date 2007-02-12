@@ -3,7 +3,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	iLBC Speech Coder
-Summary(pl):	Koder mowy iLBC
+Summary(pl.UTF-8):   Koder mowy iLBC
 Name:		libilbc
 Version:	1.0
 Release:	2
@@ -28,36 +28,36 @@ of 20 ms. The iLBC codec enables graceful speech quality degradation
 in the case of lost frames, which occurs in connection with lost or
 delayed IP packets.
 
-%description -l pl
-iLBC (internet Low Bitrate Codec) to darmowy kodek mowy nadajacy siÍ
-do komunikacji g≥osowej po IP. Kodek jest zaprojektowany ograniczonych
-≥±cz, a w efekcie wykorzystuje 13.33 kbit/s przy ramce o d≥ugo∂ci 30
-ms i 15.20 kbit/s przy ramce o d≥ugo∂ci 20 ms. Kodek iLBC umoøliwia
-obniøenie jako∂ci mowy w przypadku utraconych ramek, co zdarza siÍ w
-przypadku utraty po≥±czenia lub opÛºnionych pakietÛw IP.
+%description -l pl.UTF-8
+iLBC (internet Low Bitrate Codec) to darmowy kodek mowy nadajacy siƒô
+do komunikacji g≈Çosowej po IP. Kodek jest zaprojektowany ograniczonych
+≈ÇƒÖcz, a w efekcie wykorzystuje 13.33 kbit/s przy ramce o d≈Çugo≈õci 30
+ms i 15.20 kbit/s przy ramce o d≈Çugo≈õci 20 ms. Kodek iLBC umo≈ºliwia
+obni≈ºenie jako≈õci mowy w przypadku utraconych ramek, co zdarza siƒô w
+przypadku utraty po≈ÇƒÖczenia lub op√≥≈∫nionych pakiet√≥w IP.
 
 %package devel
 Summary:	Header files for iLBC library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki iLBC
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki iLBC
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for iLBC library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki iLBC.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki iLBC.
 
 %package static
 Summary:	Static iLBC library
-Summary(pl):	Statyczna biblioteka iLBC
+Summary(pl.UTF-8):   Statyczna biblioteka iLBC
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static iLBC library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka iLBC.
 
 %prep
