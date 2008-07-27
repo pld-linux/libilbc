@@ -6,7 +6,7 @@ Summary:	iLBC Speech Coder
 Summary(pl.UTF-8):	Koder mowy iLBC
 Name:		libilbc
 Version:	1.0
-Release:	2
+Release:	3
 License:	Global IP Sound v2.0 (requires registration for non-personal use)
 Group:		Libraries
 Source0:	http://simon.morlat.free.fr/download/1.3.x/source/ilbc-rfc3951.tar.gz
